@@ -46,8 +46,7 @@
     /* animation: rotate 1s infinite ease-in-out; */
   }
   .logo:hover{ 
-      transform: translateX(-10%)scale(1.2);
-      /* border: 2px solid #00e6a7; */
+      transform: scale(1.2);
   }
   
   #box {
@@ -118,20 +117,23 @@
     position: relative;
     /* background-color: red; */
     width: 100%;
-    height: 115vh;
+    min-height: 115vh;
     display: flex;
     justify-content: space-evenly;
     align-items: start;
     gap: 1vw;
     border-bottom: 2px solid #fff;
-    /* flex-direction: column; */
+    margin-top: 2vh;
   }
   .Img3{
+    position: relative;
+    max-width: 80% !important;
       width: 50%;
       aspect-ratio: 1/1;
       /* background-color: #00e6a7; */
   }
   .Img3 img{
+    animation: shakeY 8s infinite linear;
       width: 100%;
       height: 100%;
       border: 3px solid #00e6a7;
@@ -160,18 +162,26 @@
       -webkit-text-stroke: 2px #00e6a7;
   }
   .About_Me h1:hover{
-      animation: shake 0.1s infinite linear;
+     animation: shake 5s infinite ease-in-out;
       background-color: #CC4E04;
       border: 2px solid #fff;
   }
-  @keyframes shake {
+  @keyframes shakeX {
       from {
         transform: translateX(0);
       }
       to {
-        transform: translateX(10%);
+        transform: translateX(60%);
       }
     }
+    @keyframes shakeY {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(60%);
+        }
+      }
   
     @keyframes rotate {
       from {
@@ -194,29 +204,45 @@
   .skill{
       margin-top: 1vh;
       line-height: 1.5em;
+      cursor: pointer;
   }
-  .skill ul{
-      opacity: 1;
+  .head1  :hover{
+    scale: 1.1;
+    transform: translateX(5%);
   }
-  .skill li{
+  .head2 :hover{
+    scale: 1.1;
+    transform: translateX(5%);
+  }
+  #listed_content1{
+    opacity: 1;
+  }
+  #listed_content1 li{
       list-style: none;
   }
   .education{
       margin-top: 1vh;
       line-height: 1.5em;
+      cursor: pointer;
   }
-  .education li{
+  #listed_content2{
+    opacity: 0;
+  }
+  #listed_content2 li{
       list-style: none;
   }
-  .head{
+  .head1{
       -webkit-text-stroke: 2px #CC4E04;
   }
+  .head2{
+    -webkit-text-stroke: 2px #CC4E04;
+}
   .subhead{
       color: #00e6a7;
   }
   
   #page3{
-      position: relative;
+    position: relative;
     min-height: 100vh;
     /* background-color: #00e6a7; */
     display: flex;
@@ -276,8 +302,7 @@
       color: #000;
   }
   .one:hover{
-      transform: scale(1.1);
-       cursor: pointer;
+      cursor: pointer;
       transition:ease;
       transition-duration: 0.5s;
       background-color: #F24D35;

@@ -120,18 +120,12 @@
       aspect-ratio: 1/1;
   }
   .Img3 img{
-    animation: shakeY 8s infinite linear;
+    animation: shakeY 8s infinite ease-in-out;
       width: 100%;
       height: 100%;
       border: 3px solid #00e6a7;
       border-radius: 50%;
   }
-  .Img3 img:hover{
-      transform: rotate(360deg);
-      transition-duration: 2s;
-  
-  }
-  
   .About_Me{
       width: 75%;
       height: 100%;
@@ -166,7 +160,7 @@
           transform: translateY(0);
         }
         to {
-          transform: translateY(60%);
+          transform: translateY(40%);
         }
       }
   
@@ -380,12 +374,14 @@
       height: 80%;
       display: flex;
       justify-content: center;
+      border: 2px solid #00e6a7;
   }
   .inputArea input{
       width: 100%;
       height: 10%;
       margin-top: 4vh;
       background-color:#454444;
+      border: 1px solid #CC4E04;
   }
   .inputArea textarea{
       width: 100%;
@@ -393,6 +389,7 @@
       margin-top: 4vh;
       margin-bottom: 2vh;
       background-color:#454444;
+      border: 1px solid #CC4E04;
   }
   .btn{
       cursor: pointer;
@@ -401,6 +398,7 @@
       color:#fff;
       border-radius: 5%;
       background-color:#000;
+      border: 1px solid #CC4E04;
   }
   .btn2{
       font-size: 1rem;

@@ -39,20 +39,6 @@ gsap.to("#nav", {
     },
   });
 
-  gsap.from(".card",{
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.4,
-    scrollTrigger: {
-      trigger: "#page3",
-      scroller: "body",
-      start: "top 20%",
-      end: "top 25%",
-    //   markers:true,
-      scrub: 2,
-    },
-  });
   var btn1 = document.querySelector(".head1");
   var btn2 = document.querySelector(".head2");
 

@@ -69,22 +69,22 @@ gsap.to("#nav", {
   var menu_button = document.querySelector(".menu i");
   var body = document.getElementById("main");
   var nav = document.getElementById("menuList");
-  var flag=0
+  var flag1=0
   menu_button.addEventListener("click",function(){
-    if(flag==0){
+    if(flag1==0){
       nav.style.opacity = "1"
       nav.style.transition = "ease 0.5s"
-      flag=1
+      flag1=1
     }
     else{
       nav.style.opacity = "0"
-      flag=0
+      flag1=0
     }
   })
   body.addEventListener("click",function(){
-    if (flag==1) {
+    if (flag1==1) {
       nav.style.opacity = "0";
-      flag=0;
+      flag1=0;
       };
 
   })

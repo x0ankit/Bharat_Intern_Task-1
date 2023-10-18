@@ -65,3 +65,26 @@ gsap.to("#nav", {
       flag = 1
     }
   })
+
+  var menu_button = document.querySelector(".menu i");
+  var body = document.getElementById("main");
+  var nav = document.getElementById("menuList");
+  var flag=0
+  menu_button.addEventListener("click",function(){
+    if(flag==0){
+      nav.style.opacity = "1"
+      nav.style.transition = "ease 0.5s"
+      flag=1
+    }
+    else{
+      nav.style.opacity = "0"
+      flag=0
+    }
+  })
+  body.addEventListener("click",function(){
+    if (flag==1) {
+      nav.style.opacity = "0";
+      flag=0;
+      };
+
+  })

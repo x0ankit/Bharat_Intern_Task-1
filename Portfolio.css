@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +35,8 @@ body {
   font-weight: 500;
 }
 .logo a img {
-  height: 100px;
-  width: 100px;
+  height: 12vh;
+  aspect-ratio: 1/1;
   border-radius: 50%;
 }
 .logo:hover {
@@ -49,12 +47,21 @@ body {
   width: 75%;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
+  gap: 5vw;
+}
+#box i{
+  display: none;
+  font-size: 9vw;
+  text-align: center;
+  padding-bottom: 2vh;
 }
 .innerbox {
   width: auto;
   height: auto;
+  padding-right: 2vw;
+  
 }
 .innerbox a {
   text-decoration: none;
@@ -64,6 +71,37 @@ body {
 .innerbox:hover {
   font-size: 1.2rem;
   color: #00e6a7;
+}
+.menu{
+  width: 30%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.inner_innerbox{
+  text-align: center;
+}
+#menuList{
+  opacity: 0;
+}
+.inner_innerbox a{
+  text-transform:none;
+  font-size: 5vw;
+  text-decoration: none;
+  line-height: 5vh;
+}
+#Home:hover{
+  color:burlywood;
+}
+#About:hover{
+  color:burlywood;
+}
+#Project:hover{
+  color:burlywood;
+}
+#Contact:hover{
+  color:burlywood;
 }
 #Background_img img {
   width: 100%;
@@ -393,9 +431,13 @@ body {
 }
 
 @media (max-width: 600px) {
-  /* #box{
+  .innerbox{
     display: none;
-  } */
+  }
+  #box i{
+    display: block;
+    padding-right: 5vw;
+  }
   #page1 {
     position: relative;
     height: 80vh;
@@ -404,7 +446,7 @@ body {
   }
   #page1 pre {
     width: 100%;
-    font-size: 4vw;
+    font-size: 4.2vw;
     display: flex;
     top: 40%;
     width: 100%;
@@ -414,7 +456,8 @@ body {
   }
   #page1 img {
     align-self: center;
-    width: 90%;
+    width: 80%;
+    aspect-ratio: 1/0.8;
   }
 
   #page2 img {
@@ -423,6 +466,10 @@ body {
   #page2 p {
     display: flex;
     flex-direction: column;
+  }
+  .About_Me h1{
+    -webkit-text-stroke: 0;
+    color:burlywood;
   }
   .project_list {
     width: 95%;
@@ -435,6 +482,10 @@ body {
     height: 50%;
     border-radius: 20px;
     margin-top: 3vh;
+  }
+  .subtitle{
+    -webkit-text-stroke: 0;
+    color:burlywood;
   }
   #container1 {
     display: flex;

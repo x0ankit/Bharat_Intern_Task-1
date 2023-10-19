@@ -43,9 +43,9 @@ body {
   transform: scale(1.2);
 }
 
-#box {
-  width: 75%;
-  height: 100%;
+#box{
+  width: auto;
+  height: auto;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -62,8 +62,7 @@ body {
   cursor: pointer;
   font-weight: 500;
 }
-.innerbox:hover {
-  font-size: 1.2rem;
+.innerbox a:hover {
   color: #00e6a7;
 }
 .menu{
@@ -71,10 +70,11 @@ body {
   right: 0;
   width: 30%;
   height: 50%;
+  z-index: -1;
 }
 .menu i{
   display: none;
-  font-size: 9vw;
+  font-size: 7vw;
   text-align: center;
   padding-bottom: 2vh;
 }
@@ -86,7 +86,7 @@ body {
 }
 .inner_innerbox a{
   text-transform:none;
-  font-size: 5vw;
+  font-size: 3vw;
   text-decoration: none;
   line-height: 5vh;
 }
@@ -195,13 +195,32 @@ body {
   line-height: 1.5em;
   cursor: pointer;
 }
-.head1 :hover {
-  scale: 1.1;
-  transform: translateX(5%);
+.head1 h2::after{
+  width: 0;
+  content: " ";
+  display: block;
+  height: 3px;
+  background: #ffc600;
+  opacity: .7;
+  margin: 10px 0;
+  transition: ease 0.5s;
+  
 }
-.head2 :hover {
-  scale: 1.1;
-  transform: translateX(5%);
+.head1 :hover::after {
+  width: 30%;
+}
+.head2 h2::after{
+  width: 0;
+  content: " ";
+  display: block;
+  height: 3px;
+  background: #ffc600;
+  opacity: .7;
+  margin: 10px 0;
+  transition: ease 0.5s; 
+}
+.head2 :hover::after {
+  width: 45%;
 }
 #listed_content1 {
   opacity: 1;
@@ -424,6 +443,9 @@ body {
 @media (max-width: 600px) {
   .innerbox{
     display: none;
+  }
+  .menu{
+    z-index: 1;
   }
   .menu i{
     display: block;
